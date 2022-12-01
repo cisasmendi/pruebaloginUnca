@@ -22,18 +22,17 @@ axios({
 
 
     }
-    for (  i = 0; i < res.data.data.length; i++) {
+    for (i = 0; i < res.data.data.length; i++) {
 
-      let j = i
-        let c=res.data.data[i].attributes.requisitos[0].text
+        let j = i
+        let c = res.data.data[i].attributes.requisitos[0].text
         document.getElementById(`btn${i}`).addEventListener('click', () => {
-            document.getElementById(`req${j}`).innerHTML = "<p>"+c+"</p>"
+            document.getElementById(`req${j}`).innerHTML = "<p>" + c + "</p>"
 
         })
     }
 
 })
-
     .catch(err => console.log(err))
 
 //button.addEventListener ('click', () => {
